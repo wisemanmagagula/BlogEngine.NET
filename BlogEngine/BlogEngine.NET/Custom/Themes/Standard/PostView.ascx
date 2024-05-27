@@ -89,6 +89,8 @@
     }
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script type="text/javascript">
     function speakPostContent() {
         var msg = new SpeechSynthesisUtterance();
@@ -97,6 +99,107 @@
         msg.text = title + ". " + content;
         window.speechSynthesis.speak(msg);
     }
+
+    // Sample data for the graphs, replace this with real data
+    var postAnalytics = [
+        { time: 30, readers: 15 },
+        { time: 60, readers: 30 },
+        { time: 90, readers: 10 },
+        { time: 120, readers: 5 }
+    ];
+
+    var readersPerCountry = [
+        { country: 'RSA', percentage: 40 },
+        { country: 'ESwatini', percentage: 20 },
+        { country: 'LeSotho', percentage: 15 },
+        { country: 'Zimbabwe', percentage: 10 },
+        { country: 'Mozambique', percentage: 8 },
+        { country: 'Other', percentage: 7 }
+    ];
+
+    function drawAnalyticsGraph() {
+        var ctx = document.getElementById('analyticsChart').getContext('2d');
+        var labels = postAnalytics.map(function (item) { return item.time + "s"; });
+        var data = postAnalytics.map(function (item) { return item.readers; });
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Number of Readers',
+                    data: data,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Readers'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time Spent (seconds)'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function drawCountryGraph() {
+        var ctx = document.getElementById('countryChart').getContext('2d');
+        var labels = readersPerCountry.map(function (item) { return item.country; });
+        var data = readersPerCountry.map(function (item) { return item.percentage; });
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Readers per Country (%)',
+                    data: data,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Percentage of Readers (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Countries'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    window.onload = function () {
+        console.log("Window loaded, drawing graphs...");
+        drawAnalyticsGraph();
+        drawCountryGraph();
+    };
 </script>
+
+<canvas id="analyticsChart" width="400" height="200"></canvas>
+<canvas id="countryChart" width="400" height="200"></canvas>
 
 <% } %>

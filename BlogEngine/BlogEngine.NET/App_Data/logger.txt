@@ -1,0 +1,18 @@
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 18/05/2024 00:56:25
+Dashboard news feed: The request was aborted: Could not create SSL/TLS secure channel.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 18/05/2024 00:56:32
+BlogEngine.Core.Packaging.Load: Could not connect to the feed specified at 'https://serp.ai/'. Please verify that the package source (located in the Package Manager Settings) is valid and ensure your network connectivity.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 18/05/2024 02:31:27
+Dashboard news feed: The request was aborted: Could not create SSL/TLS secure channel.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 18/05/2024 02:31:34
+BlogEngine.Core.Packaging.Load: Could not connect to the feed specified at 'https://serp.ai/'. Please verify that the package source (located in the Package Manager Settings) is valid and ensure your network connectivity.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 18/05/2024 02:31:40
+Dashboard news feed: The request was aborted: Could not create SSL/TLS secure channel.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+Date: 18/05/2024 02:31:50
+Dashboard news feed: The request was aborted: Could not create SSL/TLS secure channel.
